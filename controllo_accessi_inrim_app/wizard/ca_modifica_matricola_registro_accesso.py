@@ -66,7 +66,7 @@ class ModificaMatricolaRegAccesso(models.TransientModel):
         search_registro_domain = [
             ("ca_persona_id", "=", self.ca_persona_id.id)
         ]
-        if self.tipo_periodo == "periodo":
+        if self.tipo_periodo == "period":
             start = datetime.combine(self.data_riferimento, time.min)
             search_registro_domain.extend([
                 ("datetime_event", ">=", start)
